@@ -1,7 +1,6 @@
 package sics;
 
-import javax.swing.JFrame;
-import sics.view.MainFrame;
+import sics.algorithms.DES;
 
 /**
  *
@@ -10,7 +9,9 @@ import sics.view.MainFrame;
 public class Main {
 
     public static void main(String[] args) {
-        JFrame mainFrame = new MainFrame();
-        mainFrame.setVisible(true);
+        DES des = new DES("0x0123456789ABCDEF", "0x133457799BBCDFF1");
+        des.encrypt();
+        System.out.println(des.getHexCipher());
     }
+
 }
